@@ -1,0 +1,37 @@
+.sectionComments {
+    margin-top: -18px;
+    padding: 67px 0 82px;
+    @include bgCover("../images/section_comments-bg.jpg")
+}
+
+.comment {
+    text-align: center;
+    color: $shadyLady;
+    font-weight: 100;
+
+    &__photo img {
+        margin: 0 auto;
+    }
+
+    &__quotation {
+        margin-top: 13px;
+        font-size: 30px;
+        letter-spacing: .6px;
+        line-height: 44px;
+    }
+
+    &__author {
+        margin-top: 17px;
+        font-size: 18px;
+        font-style: italic;
+        letter-spacing: .3px;
+    }
+}
+
+.slick-dots {
+    bottom: -53px;
+}
+
+.slick-dots li {
+    margin: 0;
+}

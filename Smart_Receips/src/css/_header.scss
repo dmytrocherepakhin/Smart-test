@@ -1,0 +1,63 @@
+.container-header {
+    position: relative;
+    padding: 0;
+}
+
+.header {
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+
+        & img {
+            margin: -11px 0 0 -22px;
+        }
+    }
+
+    &__wrapper {
+        width: 190px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 10px 0 0;
+    }
+
+    &__links {
+        display: flex;
+        width: 144px;
+        justify-content: space-between;
+        align-items: center;
+
+        & a {
+            color: $white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 3px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 18px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: $white;
+                transition: all .2s ease-in;
+            }
+
+            &:hover::after {
+                left: 0%;
+                width: 100%;
+                transition: all .2s ease-in;
+            }
+        }
+    }
+}

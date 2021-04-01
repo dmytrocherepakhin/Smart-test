@@ -1,0 +1,154 @@
+.sectionCuisines {
+    position: relative;
+
+    &__container {
+        padding: 10px;
+
+        @media(max-width:1200px) {
+            padding: 10px;
+            width: 100%;
+        }
+    }
+
+    &__header {
+        padding: 97px 0 40px;
+        text-align: center;
+
+        &_title {
+            margin-bottom: 5px;
+        }
+
+        &_line {
+            margin: 0 auto;
+        }
+
+        &_sorting {
+            position: absolute;
+            left: 10px;
+            top: 130px;
+
+            @media(max-width:768px) {
+                position: static;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__numbers {
+        padding-top: 83px;
+        padding-bottom: 49px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media(max-width:992px) {
+            justify-content: center;
+            padding: 30px 0 0;
+        }
+
+        &_number {
+            width: 132px;
+            text-align: center;
+            position: relative;
+
+            @media(max-width:992px) {
+                width: 25%;
+                padding: 50px 0 10px;
+            }
+
+            @media(max-width:768px) {
+                width: 33.33%;
+            }
+
+            @media(max-width:576px) {
+                width: 50%;
+            }
+
+            @media(max-width:400px) {
+                width: 100%;
+            }
+
+            & p:first-child {
+                position: absolute;
+                top: -44px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 36px;
+                letter-spacing: 2px;
+                display: block;
+
+                @media(max-width:992px) {
+                    top: 0;
+                }
+            }
+
+            & p:last-child {
+                margin-top: 5px;
+                font-weight: 300;
+                font-size: 16px;
+                color: $doveGray;
+                letter-spacing: .8px;
+            }
+        }
+    }
+}
+
+.sectionCuisines__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 20%;
+    position: relative;
+    cursor: pointer;
+
+    @media(max-width:1200px) {
+        width: 25%;
+    }
+
+    @media(max-width:992px) {
+        width: 33.33%;
+    }
+
+    @media(max-width:768px) {
+        width: 50%;
+    }
+
+    @media(max-width:576px) {
+        width: 100%;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block
+    }
+
+    &__text {
+        @include absoluteCentering;
+        text-align: center;
+        margin-top: -12px;
+
+        & p:first-child {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            color: $white;
+            font-size: 15.37px;
+            letter-spacing: 1px;
+        }
+
+        & p:last-child {
+            color: $white;
+            font-size: 36px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            @media(max-width:1200px) {
+                font-size: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fudi</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons//favicon-16x16.png">
+    <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page">
+    <div class="container container-header">
+        <header class="header">
+            <div class="header__logo logo">
+                <img src="./images/logo.png" alt="FUDI">
+            </div>
+            <din class="header__wrapper">
+                <div class="header__links">
+                    <a href="#" class="header__links_logIn logIn-show">log in</a>
+                    <a href="#" class="header__links_signUp signUp-show">sign up</a>
+                </div>
+                <div class="header__links_menu menu__burger"><span class="menu__burger_line"></span></div>
+            </din>
+        </header>
+    </div>
+    <section class="sectionMain" id="sectionMain">
+        <!-- menu -->
+        <nav class="menu__wrapper">
+            <div class="menu__wrapper_btn"></div>
+            <ul class="menu__items">
+                <li class="menu__items_item"><a href="#sectionMain" class="menu__items_link scroll-to">home</a></li>
+                <li class="menu__items_item"><a href="#sectionLinks" class="menu__items_link scroll-to">get more</a>
+                </li>
+                <li class="menu__items_item"><a href="#sectionApp" class="menu__items_link scroll-to">fudi APP</a>
+                </li>
+                <li class="menu__items_item"><a href="#sectionComments" class="menu__items_link scroll-to">comments</a>
+                </li>
+                <li class="menu__items_item"><a href="#sectionCuisines" class="menu__items_link scroll-to">cuisines</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- modal Log In -->
+        <div class="modal__wrapper modal__wrapper_logIn">
+            <div class="modal-logIn modal">
+                <div class="modal__arrow modal__arrow_logIn"></div>
+                <div class="modal__header">
+                    <span class="modal__header_logo logo">
+                        <img src="./images/logo.png" alt="FUDI">
+                    </span>
+                    <h2 class="modal__header_title">log-in</h2>
+                </div>
+                <form class="modal__form modal__form_lognIn" action="#" method="POST">
+                    <input class="modal__form_input" name="logInUser" type="text" placeholder="Username or email"
+                        required>
+                    <input class="modal__form_input" name="logInPassword" type="password" placeholder="password"
+                        required>
+                    <button class="modal__form_button" type="submit">log in</button>
+                </form>
+                <p class="modal__form_text">don't have an accoutn? <a href="#" class="link_signUp signUp-show">sign
+                        up</a>
+                </p>
+            </div>
+        </div>
+        <!-- modal Sign Up -->
+        <div class="modal__wrapper modal__wrapper_signUp">
+            <div class="modal-signUp modal ">
+                <div class="modal__arrow modal__arrow_signUp"></div>
+                <div class="modal__header">
+                    <span class="modal__header_logo logo">
+                        <img src="./images/logo.png" alt="FUDI">
+                    </span>
+                    <h2 class="modal__header_title">sign-up</h2>
+                </div>
+                <form class="modal__form modal__form_signUp" action="#" method="POST">
+                    <input class="modal__form_input" name="signUpUser" type="text" placeholder="Username" required>
+                    <input class="modal__form_input" name="signUpEmail" type="email" placeholder="Email" required>
+                    <input class="modal__form_input" name="signUpPassword" type="password" placeholder="password"
+                        required>
+                    <button class="modal__form_button" type="submit">sign up</button>
+                </form>
+                <p class="modal__form_text">if you already have account<a href="#" class="link_signUp logIn-show"><br>
+                        log in</a>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sectionMain__info">
+                <p class="sectionMain__info_subtitle">Find your Favorite</p>
+                <h1 class="sectionMain__info_title"> recipes </h1>
+                <button class="sectionMain__info_btn" type="button">get started</button>
+                <p class="sectionMain__info_text">OR SEND US YOUR OWN RECIPES AND <a href="#"
+                        class="sectionMain__info_link">get rewarded!</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="sectionLinks" id="sectionLinks">
+        <div class="container sectionLinks__container">
+            <div class="row">
+                <div class="col-4 col-sm-12 sectionLinks__info">
+                    <div class="sectionLinks__info_icon-border">
+                        <img class="sectionLinks__info_icon" src="./images/section_links-1.png" alt="Inspired">
+                    </div>
+                    <h2 class="sectionLinks__info_title info__title">get inspired</h2>
+                    <div class="sectionLinks__info_line line"></div>
+                    <p class="sectionLinks__info_text">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
+                        enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+                </div>
+                <div class="col-4 col-sm-12 sectionLinks__info">
+                    <div class="sectionLinks__info_icon-border">
+                        <img class="sectionLinks__info_icon" src="./images/section_links-2.png" alt="Rewarded">
+                    </div>
+                    <h2 class="sectionLinks__info_title info__title">get rewarded</h2>
+                    <div class="sectionLinks__info_line line"></div>
+                    <p class="sectionLinks__info_text">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
+                        enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+                </div>
+                <div class="col-4 col-sm-12 sectionLinks__info">
+                    <div class="sectionLinks__info_icon-border">
+                        <img class="sectionLinks__info_icon" src="./images/section_links-3.png" alt="Social">
+                    </div>
+                    <h2 class="sectionLinks__info_title info__title">get social</h2>
+                    <div class="sectionLinks__info_line line"></div>
+                    <p class="sectionLinks__info_text">Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
+                        enim a elit viverra elementuma. Aliquam erat volutpat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sectionApp" id="sectionApp">
+        <div class="container sectionApp__container">
+            <div class="row sectionApp__container_row">
+                <div class="col-6 col-xl-12 sectionApp__picture"><img class="sectionApp__picture_img"
+                        src="./images/section_app-phone.png" alt="FUDI APP"></div>
+                <div class="col-6 col-xl-12 sectionApp__info">
+                    <h2 class="sectionApp__info_title info__title">INTRODUCING THE FUDI APP</h2>
+                    <div class="sectionApp__info_line line"></div>
+                    <p class="sectionApp__info_text">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet.
+                        Aeneanet
+                        felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest ibulum tristique.
+                        Suspendisse tristique lacus ac mattis porta. <br><br>
+                        Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In libero dui, eleifend
+                        eu
+                        nisi id, egestas fringilla odio. In varius quam a mas sa hendrerit ullamcorper a eu justo.
+                        Suspendisse porta mattis convallis. Aenean tempus ligula ac odio rhoncus, quis aliquam dolor
+                        accumsan. <br><br>
+                        Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam malesuada. Duis vehicula
+                        a
+                        nibh id hendrerit. Donec sit amet ultrices ante, a mattis massa.
+                    </p>
+                    <div class="sectionApp__info_wrapper">
+                        <a class="sectionApp__info_btn" href="https://www.apple.com/app-store/" target="blank"><img
+                                src="./images/section_app-AppStore.png" alt="AppStore"></a>
+                        <a class="sectionApp__info_btn" href="https://play.google.com/store" target="blank"><img
+                                src="./images/section_app-GooglePlay.png" alt="Google play"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sectionComments" id="sectionComments">
+        <div class="container">
+            <div class="sectionComments__slicker">
+                <div class="sectionComments__slicker_comment comment">
+                    <div class="comment__photo">
+                        <img src="./images/section_comments-avatar.png" alt="Michael Dawson">
+                    </div>
+                    <p class="comment__quotation">
+                        <q>I am so happy because I found this recipe, and it just made my life
+                            easier.
+                            <br>Thanks &nbsp;so much for sharing!</q>
+                    </p>
+                    <p class="comment__author">- Michael Dawson, San Francisco, CA -</p>
+                </div>
+                <div class="sectionComments__slicker_comment comment">
+                    <div class="comment__photo">
+                        <img src="./images/section_comments-avatar.png" alt="Michael Dawson">
+                    </div>
+                    <p class="comment__quotation">
+                        <q class="comment__quotation">I am so happy because I found this recipe, and it just made my
+                            life
+                            easier.
+                            <br>Thanks &nbsp;so much for sharing!</q>
+                    </p>
+                    <p class="comment__author">- Michael Dawson, San Francisco, CA -</p>
+                </div>
+                <div class="sectionComments__slicker_comment comment">
+                    <div class="comment__photo">
+                        <img src="./images/section_comments-avatar.png" alt="Michael Dawson">
+                    </div>
+                    <p class="comment__quotation">
+                        <q class="comment__quotation">I am so happy because I found this recipe, and it just made my
+                            life
+                            easier.
+                            <br>Thanks &nbsp;so much for sharing!</q>
+                    </p>
+                    <p class="comment__author">- Michael Dawson, San Francisco, CA -</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sectionCuisines" id="sectionCuisines">
+        <div class="sectionCuisines__header">
+            <h2 class="sectionCuisines__header_title info__title">
+                BROWSE BY CUISINES
+            </h2>
+            <div class="sectionCuisines__header_line line"></div>
+            <div class="sectionCuisines__header_sorting">
+                <select name="sorting" id="sorting">
+                    <option value="default">Default </option>
+                    <option value="lowToHigh">Number of recipes - Low to High </option>
+                    <option value="highToLow">Number of recipes - High to Low </option>
+                    <option value="name">By name </option>
+                </select>
+            </div>
+        </div>
+        <div class="sectionCuisines__wrapper">
+            <!-- Restaurants -->
+        </div>
+        <div class="container sectionCuisines__container">
+            <div class="sectionCuisines__numbers">
+                <div class="sectionCuisines__numbers_number" id="recipes">
+
+                    <p></p>
+                    <p>Recipes Available</p>
+                </div>
+                <div class="sectionCuisines__numbers_number" id="users">
+                    <p></p>
+                    <p>Active Users</p>
+                </div>
+                <div class="sectionCuisines__numbers_number" id="rewiews">
+                    <p></p>
+                    <p>Positive Reviews</p>
+                </div>
+                <div class="sectionCuisines__numbers_number" id="photos">
+                    <p></p>
+                    <p>Photos & Videos</p>
+                </div>
+                <div class="sectionCuisines__numbers_number" id="spices">
+                    <p></p>
+                    <p>Spices and Herbs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__wrapper">
+                <p class="footer__rights">©2014 Fudi. All Rights Reserved.</p>
+                <p class="footer__design">
+                    <span>DESIGN BY:</span>
+                    <span>WWW.BEKADES.COM</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>

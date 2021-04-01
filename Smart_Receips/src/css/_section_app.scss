@@ -1,0 +1,45 @@
+.sectionApp {
+    background-color: $alabaster;
+    padding-top: 87px;
+
+    &__container {
+        padding: 0;
+    }
+
+    &__picture_img {
+        margin-left: -15px;
+
+        @media(max-width:768px) {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__info {
+        padding: 91px 5px 0 50px;
+
+        &_title {
+            margin-bottom: 5px;
+        }
+
+        &_text {
+            font-size: 16px;
+            font-weight: 300;
+            color: $boulder;
+            margin: 11px 0 25px;
+            letter-spacing: .95px;
+            line-height: 26px;
+        }
+
+        &_btn {
+            margin-right: 7px;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .sectionApp__container_row {
+        flex-direction: column-reverse;
+    }
+}

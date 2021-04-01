@@ -1,0 +1,39 @@
+.footer {
+    background-color: $alabaster;
+    padding: 29px 0 35px;
+
+    &__container {
+        padding: 8px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width:768px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &__rights {
+        font-weight: 300;
+        color: $Silver;
+    }
+
+    &__design {
+        margin-right: -4px;
+
+        & span:first-child {
+            font-weight: 300;
+            color: $Silver;
+            letter-spacing: 3px;
+        }
+
+        & span:last-child {
+            font-weight: 400;
+            color: $black;
+            letter-spacing: 3px;
+        }
+    }
+}

@@ -29,7 +29,8 @@ const path = {
         js: buildFolderName + 'js/',
         css: buildFolderName + 'css/',
         images: buildFolderName + 'images/',
-        fonts: buildFolderName + 'css/fonts/',
+        // fonts: buildFolderName + 'css/fonts/',
+        fonts: buildFolderName + 'fonts/',
     },
     src: {
         html: srcFolderName + '[^_]*.html',
@@ -73,7 +74,7 @@ const webpackConfig = {
                     ]
                 }
             }
-        }]
+        }, ]
     }
 };
 
@@ -156,6 +157,10 @@ gulp.task("clean", function (callback) {
     return rimraf(path.clean, callback);
 });
 
+gulp.task('default', gulp.parallel('build', 'webserver', 'watch'));
+
+gulp.task('prod', gulp.series('clean', gulp.parallel('build')));
+
 var realFavicon = require('gulp-real-favicon');
 var fs = require('fs');
 
@@ -168,8 +173,8 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 // package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function (done) {
     realFavicon.generateFavicon({
-        masterPicture: './src/js/lib/fav.png',
-        dest: './src/images/icons',
+        masterPicture: './src/images/master_picture.png',
+        dest: './src/images/icons/',
         iconsPath: '/',
         design: {
             ios: {
@@ -181,7 +186,9 @@ gulp.task('generate-favicon', function (done) {
                     declareOnlyDefaultIcon: true
                 }
             },
-            desktopBrowser: {},
+            desktopBrowser: {
+                design: 'raw'
+            },
             windows: {
                 pictureAspect: 'noChange',
                 backgroundColor: '#da532c',
@@ -209,11 +216,19 @@ gulp.task('generate-favicon', function (done) {
                     legacyIcon: false,
                     lowResolutionIcons: false
                 }
+            },
+            safariPinnedTab: {
+                pictureAspect: 'blackAndWhite',
+                threshold: 73.4375,
+                themeColor: '#5bbad5'
             }
         },
         settings: {
             scalingAlgorithm: 'Mitchell',
-            errorOnImageTooSmall: false
+            errorOnImageTooSmall: false,
+            readmeFile: false,
+            htmlCodeFile: false,
+            usePathAsIs: false
         },
         markupFile: FAVICON_DATA_FILE
     }, function () {
@@ -242,7 +257,3 @@ gulp.task('check-for-favicon-update', function (done) {
         }
     });
 });
-
-gulp.task('default', gulp.parallel('build', 'webserver', 'watch'));
-
-gulp.task('prod', gulp.series('clean', gulp.parallel('build')));
