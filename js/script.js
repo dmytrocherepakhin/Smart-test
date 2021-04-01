@@ -18004,37 +18004,37 @@ var arrRest = [{
   defautlNumber: 1,
   name: 'italian',
   numberOfRecipes: 327,
-  image: '../images/rest-1.jpg'
+  image: '../../images/rest-1.jpg'
 }, {
   defautlNumber: 2,
   name: 'indian',
   numberOfRecipes: 856,
-  image: '../images/rest-2.jpg'
+  image: '../../images/rest-2.jpg'
 }, {
   defautlNumber: 3,
   name: 'french',
   numberOfRecipes: 27,
-  image: '../images/rest-3.jpg'
+  image: '../../images/rest-3.jpg'
 }, {
   defautlNumber: 4,
   name: 'steakhouse',
   numberOfRecipes: 174,
-  image: '../images/rest-4.jpg'
+  image: '../../images/rest-4.jpg'
 }, {
   defautlNumber: 5,
   name: 'seafood',
   numberOfRecipes: 731,
-  image: '../images/rest-5.jpg'
+  image: '../../images/rest-5.jpg'
 }, {
   defautlNumber: 6,
   name: 'sushi',
   numberOfRecipes: 237,
-  image: '../images/rest-6.jpg'
+  image: '../../images/rest-6.jpg'
 }, {
   defautlNumber: 7,
   name: 'mexican',
   numberOfRecipes: 529,
-  image: '../images/rest-7.jpg'
+  image: '../../images/rest-7.jpg'
 }, {
   defautlNumber: 8,
   name: 'chinese',
@@ -18044,12 +18044,12 @@ var arrRest = [{
   defautlNumber: 9,
   name: 'pizza',
   numberOfRecipes: 327,
-  image: '../images/rest-9.jpg'
+  image: '../../images/rest-9.jpg'
 }, {
   defautlNumber: 10,
   name: 'american',
   numberOfRecipes: 1437,
-  image: '../images/rest-10.jpg'
+  image: '../../images/rest-10.jpg'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (arrRest);
 
