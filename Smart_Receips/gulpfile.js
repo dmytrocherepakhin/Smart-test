@@ -48,8 +48,8 @@ const path = {
     clean: buildFolderName
 };
 
-const isDev = true;
-// const isDev = false;
+// const isDev = true;
+const isDev = false;
 
 const webpackConfig = {
     mode: isDev ? 'development' : 'production',

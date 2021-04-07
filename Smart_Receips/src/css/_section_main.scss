@@ -1,6 +1,9 @@
 .sectionMain {
     @include bgCover("../images/section_main-bg.jpg");
     padding: 329px 0 224px 0;
+    overflow: hidden;
+    display: block;
+    // box-sizing: border-box;
 
     &__info {
         margin: 0 auto;

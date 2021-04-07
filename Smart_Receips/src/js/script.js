@@ -101,6 +101,20 @@ for (let anchor of anchors) {
     })
 }
 
+//Scroling-return
+let arrowHidden = true;
+const linkReturn = document.querySelector(".return");
+window.addEventListener('scroll', function () {
+    if (pageYOffset > 300 && arrowHidden) {
+        linkReturn.classList.toggle("return-show");
+        arrowHidden = false
+    }
+    if (pageYOffset < 300 && !arrowHidden) {
+        linkReturn.classList.toggle("return-show");
+        arrowHidden = true
+    }
+})
+
 // slider
 $('.sectionComments__slicker').slick({
     dots: true,
@@ -183,27 +197,23 @@ selector.addEventListener('change', function (e) {
 })
 
 // numbers
-counter("#recipes p:first-child", counterObj.recipes, true);
-counter("#users p:first-child", counterObj.users, true);
-counter("#rewiews p:first-child", counterObj.reviews, true);
-counter("#photos p:first-child", counterObj.photos, true);
-counter("#spices p:first-child", counterObj.spices, true);
 let showNumbers = true;
 window.addEventListener('scroll',
     function isElementInViewport() {
         if (showNumbers) {
-            const el = document.getElementById("rewiews");
-            let top = el.offsetTop;
+            const elParent = document.getElementById("sectionCuisines");
+            const el = document.querySelector(".sectionCuisines__numbers");
+            let top = elParent.offsetTop + el.offsetTop;
             let height = el.offsetHeight;
             if (
                 (top + height) < (window.pageYOffset + window.innerHeight) &&
                 (top) > window.pageYOffset
             ) {
-                counter("#recipes p:first-child", counterObj.recipes, false);
-                counter("#users p:first-child", counterObj.users, false);
-                counter("#rewiews p:first-child", counterObj.reviews, false);
-                counter("#photos p:first-child", counterObj.photos, false);
-                counter("#spices p:first-child", counterObj.spices, false);
+                counter("#recipes p:first-child", counterObj.recipes);
+                counter("#users p:first-child", counterObj.users);
+                counter("#rewiews p:first-child", counterObj.reviews);
+                counter("#photos p:first-child", counterObj.photos);
+                counter("#spices p:first-child", counterObj.spices);
                 showNumbers = false;
             };
         }
